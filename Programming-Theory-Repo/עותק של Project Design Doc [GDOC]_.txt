@@ -1,0 +1,237 @@
+﻿Project Design Document
+	
+
+14/12/2021
+Lior yaari
+	
+
+	
+
+Project Concept
+	1
+Player Control
+	
+
+	You control a 
+Garden
+	
+
+	in this  
+Top down
+	game
+	
+
+	
+
+	where
+User clicking
+	
+
+	makes the player
+Affect the prosperity of a garden.
+	
+
+	
+
+2
+Basic 
+Gameplay
+	
+
+	During the game, 
+Tools for gardening are
+	available
+	
+
+	from 
+From a side menu
+	
+
+	
+
+	and the goal of the game is to 
+Is to grow a garden.
+	
+
+	
+
+3
+Sound 
+& Effects
+	
+
+	There will be sound effects 
+Background music, planting sound
+Watering sound, 
+Spreading sound
+Fully grown plant sound,
+Clicking on menu buttons sounds
+Hovering over a menu button sound.
+	
+
+	and particle effects
+Water particle effect for watering.
+While planting brown dirt particle effect.
+When harvesting dirt effect.
+When gathering drop off items have a sparkling effect.
+
+
+	
+
+	
+
+	[optional] There will also be
+
+
+	
+
+	
+
+4
+Gameplay
+Mechanics
+	
+
+	As the game progresses, 
+More plants with different requirements are added as an option for the player.
+	
+
+	making it
+Giving more options for the players.
+	
+
+	
+
+	[optional] There will also be
+Having a basic form of inventory.
+Having different types of plants with different growing requirements and drop items.(start with one plant template and then diversify with inheritance).
+Selling drop items for points or using them in order to help plants or increase garden capabilities.
+	
+
+	
+
+5
+User
+Interface
+	
+
+	The 
+score/lives/timer
+	
+
+	will 
+increase/decrease
+	
+
+	whenever
+condition to change score/lives/timer.
+	
+
+	
+
+	At the start of the game, the title
+Opening title
+	will appear
+	
+
+	and the game will end when
+When the player sells there garden for a finale score.
+	
+
+	
+
+6
+Other Features
+	
+
+	
+
+Skippable Opening screen.
+Main menu with an option to loud up saves (either limited or unlimited number of save files).
+High score Board for all Finished and currently running games.
+Options to delete a save file and a name in the leaderboard, a reset for the whole game.
+
+
+
+
+	
+
+	
+
+Project Timeline
+Milestone
+	Description
+	Due 
+	#1
+	
+
+* Functional feature(s) by milestone #1
+	
+
+	
+
+mm/dd
+	
+
+	#2
+	
+
+* Functional feature(s) by milestone #2
+	
+
+	
+
+mm/dd
+	
+
+	#3
+	
+
+* Functional feature(s) by milestone #3
+	
+
+	
+
+mm/dd
+	
+
+	#4
+	
+
+* Functional feature(s) by milestone #4
+	
+
+	
+
+mm/dd
+	
+
+	#5
+	
+
+* Functional feature(s) by milestone #5
+	
+
+	
+
+mm/dd
+	
+
+	Backlog
+	
+
+* Feature on backlog - not a part of the minimum viable product
+* Feature on backlog - not a part of the minimum viable product
+* Feature on backlog - not a part of the minimum viable product
+	
+
+	
+
+mm/dd
+	
+
+	
+
+
+
+Project Sketch
