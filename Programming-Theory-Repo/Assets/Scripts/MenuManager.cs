@@ -10,6 +10,10 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("GamePlay");
     }
+    public void EnterMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
     public void Quit()
     {
 #if UNITY_EDITOR
