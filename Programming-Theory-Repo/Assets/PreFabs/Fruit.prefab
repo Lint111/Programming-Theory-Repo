@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7650548980593387868}
   - component: {fileID: 7650548980593387864}
   - component: {fileID: 8772482599410589134}
+  - component: {fileID: -6552570976301120876}
   m_Layer: 0
   m_Name: Fruit
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7650548980593387859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.2009075, y: 1.2, z: 1.9621165}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,5 +125,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ef58da9e1fd2034fb67768579438433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsValue: 5
+--- !u!114 &-6552570976301120876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650548980593387859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee06a3b9824ae264c991424a8181e509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

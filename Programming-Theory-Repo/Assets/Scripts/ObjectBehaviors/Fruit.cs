@@ -27,7 +27,7 @@ public class Fruit : MonoBehaviour
         rb.inertiaTensorRotation = new Quaternion(0.01f, 0.01f, 0.01f, 1f);
         rb.AddTorque(-rb.angularVelocity * scaler);
     }
-    private void OnMouseDown()
+    public void Sell()
     {
         HSManager.AddScore(pointsValue);
         Destroy(gameObject);
