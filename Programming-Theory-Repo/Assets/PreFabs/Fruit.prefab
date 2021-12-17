@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7650548980593387869}
   - component: {fileID: 7650548980593387868}
   - component: {fileID: 7650548980593387864}
+  - component: {fileID: 8772482599410589134}
   m_Layer: 0
   m_Name: Fruit
   m_TagString: Untagged
@@ -91,7 +92,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7650548980593387859}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: efc30cf7403dff1459ce76c445a2dae8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -113,3 +114,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8772482599410589134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650548980593387859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef58da9e1fd2034fb67768579438433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

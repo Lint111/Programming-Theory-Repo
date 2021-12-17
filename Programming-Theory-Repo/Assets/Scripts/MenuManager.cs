@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 #endif
 public class MenuManager : MonoBehaviour
-{
+{     
     
     public void NewGame()
     {
@@ -22,4 +22,5 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
 #endif
     }
+    
 }
