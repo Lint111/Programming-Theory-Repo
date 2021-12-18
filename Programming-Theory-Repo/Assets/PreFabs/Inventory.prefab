@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8709543849487013376}
   - component: {fileID: 5857280249999221063}
   - component: {fileID: 7177477917487117014}
-  - component: {fileID: -8962677451254813084}
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -112,15 +111,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 0.15, z: 10}
   m_Center: {x: 0, y: 0.03, z: 0}
---- !u!114 &-8962677451254813084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2922570181165633712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34eff65e5c93dff4db5f5c4ca1fa6246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

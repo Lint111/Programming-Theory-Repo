@@ -112,5 +112,7 @@ MonoBehaviour:
   growthTime: 5
   sizeScale: 3
   fruit: {fileID: 7650548980593387859, guid: 2eed7e90853688e43afd0038356056c9, type: 3}
-  xzRange: 5
-  yRange: 10
+  dirtSparkle: {fileID: 658197195693249574, guid: 73b8dee3399438e46b8590710f90dcfa, type: 3}
+  GreenSparkle: {fileID: 658197195693249574, guid: 174161aa830893d439ce2e46a85cb7b1, type: 3}
+  xRange: 1
+  zRange: 0.3

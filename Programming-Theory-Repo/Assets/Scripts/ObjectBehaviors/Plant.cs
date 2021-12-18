@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
+
 
 public class Plant : MonoBehaviour
 {
@@ -11,16 +8,28 @@ public class Plant : MonoBehaviour
     [SerializeField]
     private float sizeScale = 1;
     [SerializeField]
-    private GameObject fruit;
+
+    private GameObject fruit;       
+    private GameObject Inventory;
+    [SerializeField]
+    private ParticleSystem dirtSparkle;
+    [SerializeField]
+    private ParticleSystem GreenSparkle;
 
     [SerializeField]
-    private float xzRange = 5;
+    private float xRange = 1;
     [SerializeField]
-    private float yRange = 10;
+    private float zRange = 0.3f;
+
+    private const float yPos = 0.5f;
 
     
-    private float timeGrown=0;      
+    private float timeGrown=0;
 
+    private void Awake()
+    {
+        Inventory = GameObject.Find("Inventory");        
+    }
     // Update is called once per frame
     void Update()
     {
@@ -45,10 +54,12 @@ public class Plant : MonoBehaviour
 
     private void Harvest()
     {
-        GameObject go = Instantiate(fruit, transform.position, fruit.transform.rotation);
-        Vector3 spawnVelocity = new Vector3(Random.Range(-xzRange, xzRange), Random.Range(0, yRange), Random.Range(-xzRange, xzRange));
-        go.GetComponent<Rigidbody>().AddForce(spawnVelocity, ForceMode.Impulse);
+        //free the plant bed to be used again.
+        transform.parent.GetComponent<PlantBed>().FreeBed();
+        SpawnFruit(3);
+        PlayParticleEffect(dirtSparkle);
         Destroy(gameObject);
+
     }
 
     private void Grow()
@@ -59,7 +70,25 @@ public class Plant : MonoBehaviour
         if(IsFullyGrown())
         {
             //here will be all the sound and particle effect for a fully formed plant.
-            Debug.Log($"{gameObject.name} is grown");
+            PlayParticleEffect(GreenSparkle);
         }
+    }
+
+    private void SpawnFruit(int maxRandomFruits)
+    {
+        int numberOfFruits = Random.Range(1, maxRandomFruits);
+        for (int i=0; i < numberOfFruits; i++)
+        {
+            //Set the fruit spwan position in the inventory and spawn it.
+            Vector3 spawnPos = new Vector3(Random.Range(-xRange, xRange), Random.Range(0, yPos), Random.Range(-zRange, zRange));
+            Instantiate(fruit, Inventory.transform.position + spawnPos, fruit.transform.rotation);
+        }
+    }
+
+    private void PlayParticleEffect(ParticleSystem PS)
+    {
+        ParticleSystem ParticalEffect = Instantiate(PS, transform.position, PS.transform.rotation);
+        ParticalEffect.Play();
+        Destroy(ParticalEffect);
     }
 }
