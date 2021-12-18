@@ -12,6 +12,13 @@ public class StateManager : MonoBehaviour
         Singleton();
     }
 
+    //Ending the game function.
+    public void EndGame()
+    {
+        Debug.Log("Game had ended!");
+    }
+
+    //Singleton Pattern.
     private void Singleton()
     {
         if(Instance!!=null)
@@ -22,4 +29,5 @@ public class StateManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    
 }

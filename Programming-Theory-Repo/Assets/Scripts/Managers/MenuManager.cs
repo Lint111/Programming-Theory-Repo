@@ -4,11 +4,15 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 #endif
 public class MenuManager : MonoBehaviour
-{
+{     
     
     public void NewGame()
     {
         SceneManager.LoadScene("GamePlay");
+    }
+    public void EnterMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
     public void Quit()
     {
@@ -18,4 +22,5 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
 #endif
     }
+    
 }
