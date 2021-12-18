@@ -47,11 +47,14 @@ public class Plant : MonoBehaviour
         }
     }
 
+    // cheacking if the plant is fully grown.
     private bool IsFullyGrown()
     {
         return timeGrown > growthTime;
     }
 
+    //releasing a plantbed to be used again, spawning fruit and partical effects.
+    //destroying the plant.
     private void Harvest()
     {
         //free the plant bed to be used again.
@@ -62,6 +65,7 @@ public class Plant : MonoBehaviour
 
     }
 
+    //encreasing the size of the plant over time.
     private void Grow()
     {
         timeGrown += Time.deltaTime;
@@ -73,7 +77,7 @@ public class Plant : MonoBehaviour
             PlayParticleEffect(GreenSparkle);
         }
     }
-
+    //spawning random amount of fruits with the minimum amount as 1.
     private void SpawnFruit(int maxRandomFruits)
     {
         int numberOfFruits = Random.Range(1, maxRandomFruits);
@@ -85,10 +89,11 @@ public class Plant : MonoBehaviour
         }
     }
 
+    //handeling the spawning playing and destroying of particle effects.
     private void PlayParticleEffect(ParticleSystem PS)
     {
         ParticleSystem ParticalEffect = Instantiate(PS, transform.position, PS.transform.rotation);
         ParticalEffect.Play();
-        Destroy(ParticalEffect);
+        Destroy(ParticalEffect,ParticalEffect.main.duration);
     }
 }
