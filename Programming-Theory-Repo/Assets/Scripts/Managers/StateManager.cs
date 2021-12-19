@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class StateManager : MonoBehaviour
 {
     public static StateManager Instance;
-    
+    public string playerName = "";
+    public int score=0;
+       
     //singleton pattern
     public void Awake()
     {
