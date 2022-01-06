@@ -23,38 +23,38 @@ public class DataManager : MonoBehaviour
     public void AddData(int score, string name)
     {
         string path = Application.persistentDataPath + "/savefile.json";
-        if (File.Exists(path))
+        if (!File.Exists(path))  return;
+        
+        string json = File.ReadAllText(path);
+        Data data = JsonUtility.FromJson<Data>(json);            
+
+        int tmpInt1;
+        int tmpInt2;
+        string tmpString1;
+        string tmpString2;
+
+        for (int i = data.playerNames.Length - 1; i > 0; i--)
         {
-            string json = File.ReadAllText(path);
-            Data data = JsonUtility.FromJson<Data>(json);            
-
-            int tmpInt1 = 0;
-            int tmpInt2 = 0;
-            string tmpString1 = "";
-            string tmpString2 = "";
-            for (int i = data.playerNames.Length - 1; i > 0; i--)
+            if (score > highScores[i])
             {
-                if (score > highScores[i])
-                {
-                    tmpInt1 = highScores[i];
-                    tmpString1 = playerNames[i];
-                    highScores[i] = score;
-                    playerNames[i] = name;
+                tmpInt1 = highScores[i];
+                tmpString1 = playerNames[i];
+                highScores[i] = score;
+                playerNames[i] = name;
 
-                    for (int j = i - 1; j > 0; j--)
-                    {
-                        tmpInt2 = highScores[j];
-                        tmpString2 = playerNames[j];
-                        highScores[j] = tmpInt1;
-                        playerNames[j] = tmpString1;
-                        tmpInt1 = tmpInt2;
-                        tmpString1 = tmpString2;
-                    }
+                for (int j = i - 1; j > 0; j--)
+                {
+                    tmpInt2 = highScores[j];
+                    tmpString2 = playerNames[j];
+                    highScores[j] = tmpInt1;
+                    playerNames[j] = tmpString1;
+                    tmpInt1 = tmpInt2;
+                    tmpString1 = tmpString2;
                 }
-                return;
             }
-        }
-    }
+            return;
+        }        
+    }   
 
     public void SaveData()
     {

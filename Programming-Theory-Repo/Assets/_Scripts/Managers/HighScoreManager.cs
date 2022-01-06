@@ -6,8 +6,8 @@ using TMPro;
 public class HighScoreManager : MonoBehaviour
 {
     public TMP_Text highScoreText;
-    private int highScore = 0;
-    private string playerName="";       
+    private int highScore;
+    private string playerName;       
     
     public void AddScore(int points)
     {
