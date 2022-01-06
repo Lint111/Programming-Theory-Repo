@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -8,18 +9,25 @@ public class StateManager : MonoBehaviour
 {
     public static StateManager Instance;
     public string playerName = "";
-    public int score=0;
+    
        
     //singleton pattern
     public void Awake()
     {
-        Singleton();
+        Singleton();        
+    }
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Menu")
+            DataManager.Instance.LoadData();
     }
 
     //Ending the game function.
-    public void EndGame()
+    public void EndGame(int score)
     {
         Debug.Log("Game had ended!");
+        DataManager.Instance.AddData(score, playerName);
+        DataManager.Instance.SaveData();
     }
 
     //Singleton Pattern.

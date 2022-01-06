@@ -9,14 +9,17 @@ public class MenuManager : MonoBehaviour
     public void NewGame()
     {
         StateManager.Instance.playerName = GameObject.Find("Name Input").GetComponent<TMP_InputField>().text;
-        SceneManager.LoadScene("GamePlay");
+        DataManager.Instance.SaveData();
+        SceneManager.LoadScene("GamePlay");        
     }
     public void EnterMenu()
     {
-        SceneManager.LoadScene("Menu");
+        DataManager.Instance.LoadData();
+        SceneManager.LoadScene("Menu");        
     }
     public void Quit()
     {
+        DataManager.Instance.SaveData();
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 #else

@@ -7,6 +7,8 @@ public class TimerManager : MonoBehaviour
 {
     [SerializeField]
     private int gameLengthInSeconds=60;
+    [SerializeField]
+    private HighScoreManager highScoreManager;
 
     private int currentTimeLeft;
 
@@ -35,7 +37,8 @@ public class TimerManager : MonoBehaviour
             currentTimeLeft--;
             UpdateTimer();
         }
-        StateManager.Instance.EndGame();
+        int score = highScoreManager.GetScore();
+        StateManager.Instance.EndGame(score);
     }
 
     //update timer UI text.
